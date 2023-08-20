@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_ll"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/main_top_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="10dp"
+        android:text="202035309 Kim Doyeon"
+        android:background="#FFAAAA"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+
+    <LinearLayout
+        android:id="@+id/main_layout_for_btn_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="6dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFCDCDCD"
+            android:textColor="@color/black"
+            android:text="로그인"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/info_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFCDCDCD"
+            android:textColor="@color/black"
+            android:text="인적사항"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/grade_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFCDCDCD"
+            android:textColor="@color/black"
+            android:text="학점"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/main_frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/layout_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="24dp"
+            android:orientation="vertical"
+            android:background="#FFEEEE"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/login_id_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@color/white"
+                android:hint="아이디를 입력하세요"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/login_pw_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:background="@color/white"
+                android:hint="비밀번호를 입력하세요"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:id="@+id/login_signin_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:layout_marginTop="20dp"
+                android:text="로그인"/>
+            <Button
+                android:id="@+id/login_signup_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:text="회원가입"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:visibility="visible">
+
+            <ScrollView
+                android:id="@+id/info_scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="470dp"
+                        android:layout_marginTop="30dp"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/profile_img_empty" />
+
+                    <TextView
+                        android:id="@+id/info_name_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="이름: 김도연"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/info_major_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="학과: 소프트웨어학과"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/info_student_no_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="학번: 202035309"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/info_class_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="전체 이수 학점: 72"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/info_this_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="현재 학기 이수 학점: 18"
+                        android:textSize="17sp" />
+
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_grade"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
+
+            <TableLayout
+                android:id="@+id/grade_table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*">
+                <TableRow
+                    android:background="@color/black">
+                    <TextView
+                        android:text="과목"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:background="#FFEEEE"
+                        android:layout_margin="1dp"/>
+                    <TextView
+                        android:text="성적"
+                        android:gravity="center"
+                        android:background="#FFEEEE"
+                        android:layout_margin="1dp"
+                        android:padding="3dp"/>
+                    <TextView
+                        android:text="학점"
+                        android:gravity="center"
+                        android:background="#FFEEEE"
+                        android:layout_margin="1dp"
+                        android:padding="3dp"/>
+                </TableRow>
+                <TableRow
+                    android:background="@color/black">
+                    <TextView
+                        android:text="모바일프로그래밍"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:layout_margin="1dp"
+                        android:padding="3dp"/>
+                    <TextView
+                        android:text="A+"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:layout_margin="1dp"
+                        android:padding="3dp"/>
+                    <TextView
+                        android:text="3"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:layout_margin="1dp"
+                        android:padding="3dp"/>
+                </TableRow>
+                <TableRow
+                    android:background="@color/black">
+                    <TextView
+                        android:text="졸업작품"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:layout_margin="1dp"
+                        android:padding="3dp"/>
+                    <TextView
+                        android:text="A"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:layout_margin="1dp"
+                        android:padding="3dp"/>
+                    <TextView
+                        android:text="1"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:layout_margin="1dp"
+                        android:padding="3dp"/>
+                </TableRow>
+                <TableRow
+                    android:background="@color/black">
+                    <TextView
+                        android:text="고급웹프로그래밍"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:layout_margin="1dp"
+                        android:padding="3dp"/>
+                    <TextView
+                        android:text="A+"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:layout_margin="1dp"
+                        android:padding="3dp"/>
+                    <TextView
+                        android:text="3"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:layout_margin="1dp"
+                        android:padding="3dp"/>
+                </TableRow>
+                <TableRow
+                    android:background="@color/black">
+                    <TextView
+                        android:text="소프트웨어공학"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:layout_margin="1dp"
+                        android:padding="3dp"/>
+                    <TextView
+                        android:text="B+"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:layout_margin="1dp"
+                        android:padding="3dp"/>
+                    <TextView
+                        android:text="3"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:layout_margin="1dp"
+                        android:padding="3dp"/>
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>
