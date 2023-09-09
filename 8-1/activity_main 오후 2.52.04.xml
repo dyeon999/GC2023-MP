@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Shared Preferences Login"
+        android:textSize="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/usertext"
+        android:layout_marginTop="100dp"
+        android:text="USERNAME"
+        android:textSize="20dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/userinput"
+        android:layout_alignBaseline="@+id/usertext"
+        android:layout_toRightOf="@+id/usertext"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/userpass"
+        android:layout_below="@+id/usertext"
+        android:layout_marginTop="50dp"
+        android:text="PASSWORD"
+        android:textSize="20dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/passinput"
+        android:layout_alignBaseline="@+id/userpass"
+        android:layout_toRightOf="@+id/userpass"
+        android:inputType="textPassword"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/submit"
+        android:layout_marginTop="60dp"
+        android:text="Submit"
+        android:layout_below="@+id/userpass"/>
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/exit"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="110dp"
+        android:text="Exit"
+        android:layout_below="@+id/userpass"
+        android:layout_toRightOf="@+id/submit"/>
+
+</RelativeLayout>
